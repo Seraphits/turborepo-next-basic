@@ -18,7 +18,7 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
 
-  apps/docs:
+  apps/readboot:
     dependencies:
       '@repo/ui':
         specifier: workspace:*
@@ -55,7 +55,7 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
 
-  apps/web:
+  apps/scrambled-sounds:
     dependencies:
       '@repo/ui':
         specifier: workspace:*
