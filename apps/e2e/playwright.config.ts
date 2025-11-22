@@ -19,7 +19,9 @@ const config: PlaywrightTestConfig = {
     url: 'http://localhost:3002', // Wait for the slowest starting app (ReadBoot)
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
-    cwd: path.resolve(__dirname, '../../'), // Executes command from the root
+    shell: false, // FINAL FIX: Bypasses the problematic local shell execution
+  cwd: path.resolve(__dirname, '../../'),
+     // Executes command from the root
   },
 
   // Your Projects Definition for Isolated Testing (Approach 2)

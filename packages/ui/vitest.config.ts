@@ -1,18 +1,26 @@
 // packages/ui/vitest.config.ts
 
-import { defineConfig } from 'vite'; // FIX: Import changed to base 'vite' to resolve module error
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import path from 'path'; // Already imported, correct
 
 export default defineConfig({
   plugins: [
-    tsconfigPaths(), // Resolves path aliases like @repo/ui/*
+    tsconfigPaths(),
     react()
   ],
+
+  // ADD THE FINAL ARCHITECTURAL FIX HERE
+  optimizeDeps: {
+    // This tells Vite/Vitest's bundler to process these CJS libraries correctly.
+    include: ['@testing-library/jest-dom', '@vitejs/plugin-react'],
+  },
+
   test: {
-    environment: 'jsdom', // CRITICAL: Uses the browser environment simulator
+    environment: 'jsdom',
     globals: true,
-    setupFiles: ['./test/setup.ts'], // Runs environment setup before tests
-    // We expect the local script in package.json to be set to "npx vitest run"
+    // *** CRITICAL CHANGE: Use path.resolve for absolute pathing ***
+
   },
 });
