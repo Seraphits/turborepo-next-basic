@@ -9,12 +9,16 @@ const config: PlaywrightTestConfig = {
   // ... (Your other configurations, like testDir, reporters, etc.)
 
   // CRITICAL: WebServer Configuration (Your dynamic command)
-  webServer: {
-    command: `pnpm run start --filter={process.env.APP_NAME}`,
-    url: process.env.CI ? 'http://localhost:3000' : 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
-  },
+// Final webServer configuration for ISOLATED TESTING (Option 2)
+
+webServer: {
+  command: 'pnpm run test:e2e',
+  url: 'http://localhost:3000',
+  timeout: 120 * 1000,
+  reuseExistingServer: !process.env.CI,
+  // ADD THIS LINE: Tells Playwright to execute the command from the monorepo root.
+  cwd: path.resolve(__dirname, '../../'),
+},
 
   // Your Projects Definition
   projects: [
