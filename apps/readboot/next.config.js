@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ["@repo/ui"],
   sassOptions: {
     includePaths: [
       path.join(__dirname, '../../packages/ui/src/styles')
