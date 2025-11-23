@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@repo/ui/src/components/Button/Button";
 
 export default function Home() {
