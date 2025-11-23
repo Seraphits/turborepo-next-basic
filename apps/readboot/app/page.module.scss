@@ -1,0 +1,5 @@
+@use "../../../packages/ui/src/styles/variables" as vars;
+
+.page {
+  background: vars.$Brand-primary;
+}

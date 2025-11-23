@@ -4,7 +4,9 @@
   "type": "module",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "style": "./src/styles/_variables.scss",
+    "./*": "./src/*.tsx",
+    "./scss/*": "./src/styles/*"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -34,6 +36,7 @@
     "vitest": "^4.0.13"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   }
