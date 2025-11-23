@@ -1,0 +1,66 @@
+@use "../../styles/variables" as vars;
+
+// Define the 3D rotation animation
+@mixin ButtonAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transition: all 0.5s;
+  font-family: sans-serif; // Use system font for now
+  font-weight: 700;
+}
+
+.btm3Layers {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: white;
+
+  // Use your design token for the border and text
+  border: 1px solid vars.$brand-primary;
+  color: vars.$brand-primary;
+
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden; // Keeps the 3D layers inside
+
+  // Layer 1 (Top Fold - e.g., "Have")
+  &::before {
+    content: attr(data-top); // Dynamic text from React props!
+    @include ButtonAnimation;
+
+    // Lighten the brand color for the 3D effect
+    background-color: color-mix(in srgb, #{vars.$brand-primary}, white 30%);
+    color: white;
+    transform-origin: top;
+  }
+
+  // Layer 2 (Bottom Fold - e.g., "Fun")
+  &::after {
+    content: attr(data-bottom); // Dynamic text from React props!
+    @include ButtonAnimation;
+
+    // Different shade for the bottom layer
+    background-color: color-mix(in srgb, #{vars.$brand-primary}, white 50%);
+    color: white;
+    transition-delay: 0.15s;
+    transform-origin: bottom;
+  }
+
+  // Hover State: Reset rotation to show the layers
+  &:hover::before,
+  &:hover::after {
+    transform: rotateX(0deg);
+  }
+}
