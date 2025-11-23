@@ -5,6 +5,7 @@
   "private": true,
   "exports": {
     "style": "./src/styles/_variables.scss",
+    ".": "./src/index.tsx",
     "./*": "./src/*.tsx",
     "./scss/*": "./src/styles/*",
     "./scss/*": "./src/styles/*",
