@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@repo/ui/src/components/Button/Button";
+import { Button } from "@repo/ui";
 import styles from "./page.module.scss"; // We will create this next
 
 export default function PatternLab() {
