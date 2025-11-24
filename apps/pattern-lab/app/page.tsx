@@ -10,7 +10,7 @@ const projects = [
     description: "The core educational reading application.",
     port: 3002,
     // TODO: Update this URL once you deploy ReadBoot to Vercel
-    prodUrl: "turborepo-next-basic-readboot.vercel.app",
+    prodUrl: "https://turborepo-next-basic-readboot.vercel.app/",
   },
   {
     id: "scrambled",
