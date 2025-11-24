@@ -9,7 +9,8 @@
     "check-types": "turbo run check-types",
     "test:e2e": "pnpm turbo run dev",
     "dev:clean": "kill-port 3002 3001 || true && turbo run dev",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "husky": "^9.1.7",
