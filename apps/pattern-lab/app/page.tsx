@@ -10,7 +10,7 @@ const projects = [
     description: "The core educational reading application.",
     port: 3002,
     // TODO: Update this URL once you deploy ReadBoot to Vercel
-    prodUrl: "https://readboot-production.vercel.app",
+    prodUrl: "turborepo-next-basic-readboot.vercel.app",
   },
   {
     id: "scrambled",
@@ -18,7 +18,7 @@ const projects = [
     description: "Audio processing and decoding game.",
     port: 3001,
     // TODO: Update this URL once you deploy Scrambled Sounds to Vercel
-    prodUrl: "https://scrambled-sounds.vercel.app",
+    prodUrl: "https://turborepo-next-basic-scrambled-soun.vercel.app/",
   },
 ];
 
