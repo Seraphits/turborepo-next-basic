@@ -1,19 +1,14 @@
-// apps/readboot/next.config.js
+import type { NextConfig } from 'next';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // CRITICAL: Tell Next.js to compile the UI package
+const nextConfig: NextConfig = {
+  // 1. Allow Next.js to compile the workspace package
   transpilePackages: ["@repo/ui"],
 
+  // 2. SCSS Shared Path
+  // We use process.cwd() to get the app folder, then go up two levels to packages
   sassOptions: {
-    includePaths: [
-      path.join(__dirname, '../../packages/ui/src/styles')
-    ],
+    includePaths: [path.join(process.cwd(), '../../packages/ui/src/styles')],
   },
 };
 

@@ -11,7 +11,7 @@
   "dependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@repo/ui": "workspace:^",
+    "@repo/ui": "workspace:*",
     "next": "16.0.3",
     "react": "19.2.0",
     "react-dom": "19.2.0"
