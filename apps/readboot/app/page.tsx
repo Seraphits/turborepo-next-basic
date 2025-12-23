@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@repo/ui";
+import ProjectList from '../src/ProjectList';
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       {/* 2. Custom Message Button */}
       <Button topText="Read" bottomText="Boot">
         Start Reading
+        <h2>Testing Data connetion</h2>
+        <ProjectList />
       </Button>
     </div>
   );

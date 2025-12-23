@@ -5,7 +5,10 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "MONGO_URI"
+      ]
     },
     "lint": {
       "dependsOn": ["^lint"]
@@ -13,14 +16,20 @@
     "check-types": {
       "dependsOn": ["^check-types"]
     },
-    "dev": {
+  "dev": {
       "cache": false,
-  "persistent": true
+      "persistent": true,
+      "env": [
+        "MONGO_URI"
+      ]
     },
-    "test": {
-  "dependsOn": ["^build"],
-  "cache": false,
-  "outputs": []
+  "test": {
+    "dependsOn": ["^build"],
+     "env": [
+        "MONGO_URI"
+      ],
+    "cache": false,
+    "outputs": []
 }
   }
 }
