@@ -20,17 +20,34 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@storybook/react": "^10.1.11",
+    "@storybook/react-webpack5": "^10.1.11",
+    "@storybook/test": "^8.6.15",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.7.0",
-    "jsdom": "^24.0.0",
     "eslint": "^8.57.0",
+    "jsdom": "^24.0.0",
+    "sass": "^1.94.2",
+    "storybook": "^10.1.11",
     "typescript": "5.9.2",
     "vite-tsconfig-paths": "^4.3.2"
-
   },
- "exports": {
+  "exports": {
     ".": "./src/index.tsx"
-  }
+  },
+  "extends": "@repo/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*",
+    "src/types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
-
