@@ -1,5 +1,5 @@
 {
-  "name": "@lumina/tokens",
+  "name": "@repo/tokens",
   "version": "0.0.0",
   "main": "./src/index.scss"
 }
