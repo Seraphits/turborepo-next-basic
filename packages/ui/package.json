@@ -16,12 +16,6 @@
     "check-types": "tsc --noEmit",
     "test": "vitest run --passWithNoTests"
   },
-  "exports": {
-    ".": "./src/index.tsx",
-    "./abstracts": "./src/styles/abstracts/_index.scss",
-    "./base": "./src/styles/base/_index.scss",
-    "./components/Footer": "./src/components/Footer/footer.tsx"
-  },
   "dependencies": {
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

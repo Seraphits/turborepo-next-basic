@@ -1,11 +1,11 @@
 import { ThemeContract } from './types';
 
-export const readBootTheme: ThemeContract = {
+export const docsTheme: ThemeContract = {
   colors: {
-    light: '#FAF9F6', // ref-color-offwhite
-    dark: '#36454F',       // ref-color-charcoal
-    primary: '#DC143C',    // ref-color-crimson
-    secondary: '#008080',  // Teal (Navigators)
+    light: '#FAF9F6',
+    dark: '#36454F',
+    primary: '#144ddc',
+    secondary: '#9e97e4',
     surface: '#FAF9F6',
   },
   typography: {

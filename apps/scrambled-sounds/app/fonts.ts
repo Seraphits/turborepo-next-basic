@@ -1,6 +1,6 @@
 import { Henny_Penny, Lexend } from 'next/font/google';
 
-export const henny = Henny_Penny({
+export const hennyPenny = Henny_Penny({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-henny',
