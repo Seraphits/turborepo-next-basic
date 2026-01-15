@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -25,6 +26,19 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+=======
+import StyledComponentsRegistry from '@repo/ui/registry';
+import { Providers } from './providers';
+import { baloo, inter } from './fonts';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${baloo.variable} ${inter.variable}`}>
+      <body>
+        <StyledComponentsRegistry>
+          <Providers>{children}</Providers>
+        </StyledComponentsRegistry>
+>>>>>>> Stashed changes
       </body>
     </html>
   );
