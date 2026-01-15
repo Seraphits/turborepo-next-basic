@@ -38,7 +38,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: var(--color-background);
+    background-color: var(--color-light);
     color: var(--color-text);
     font-family: var(--font-body);
     transition: background-color 0.3s ease, color 0.3s ease;
