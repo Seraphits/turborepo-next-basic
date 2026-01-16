@@ -1,11 +1,10 @@
-//import { Button } from "@repo/ui";
-import styles from "./page.module.scss";
+"use client";
 
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <h1> scrambled sounds homepage</h1>
+    <div >
+      <h1> Scrambled Sounds Home Page</h1>
     </div>
   );
 }
