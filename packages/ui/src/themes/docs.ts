@@ -5,7 +5,7 @@ export const docsTheme: ThemeContract = {
     light: '#FAF9F6',
     dark: '#36454F',
     primary: '#144ddc',
-    secondary: '#97b3e4',
+    secondary: '#c463cb',
     surface: '#FAF9F6',
   },
   typography: {
